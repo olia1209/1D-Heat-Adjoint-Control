@@ -1,0 +1,4 @@
+```plaintext
+numpy
+matplotlib
+scipy
