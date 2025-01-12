@@ -1,6 +1,6 @@
 import numpy as np
 
-def solve_forward(u0, boundary_temp, alpha, dx, dt, T, L):
+def solve_forward(u0, boundary_temp, alpha, dx, dt, Nx, Nt):
     """
     Solve the 1D heat equation using explicit finite difference method.
     
@@ -24,9 +24,6 @@ def solve_forward(u0, boundary_temp, alpha, dx, dt, T, L):
         u: ndarray
             Numerical solution of u(t, x).
     """
-    # Calculate number of spatial and time steps
-    Nx = int(L / dx) + 1
-    Nt = int(T / dt)
     
     # Initialize solution array
     u = np.zeros((Nt+1, Nx))

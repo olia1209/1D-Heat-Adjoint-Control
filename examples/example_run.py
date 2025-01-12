@@ -10,6 +10,10 @@ dx = 0.01     # Space step size
 dt = 0.0001   # Time step size
 alpha = 0.01  # Thermal diffusivity
 
+# Calculate number of spatial and time steps
+Nx = int(L / dx) + 1
+Nt = int(T / dt)
+
 # Initial temperature distribution
 u0 = np.zeros(int(L / dx) + 1)
 
@@ -18,7 +22,7 @@ def boundary_temp(t):
     return 100.0  # Keep left boundary at 100 degrees
 
 # Solve the heat equation
-u = solve_forward(u0, boundary_temp, alpha, dx, dt, T, L)
+u = solve_forward(u0, boundary_temp, alpha, dx, dt, Nx, Nt)
 
 # Plot the result at the final time step
 x = np.linspace(0, L, int(L / dx) + 1)
