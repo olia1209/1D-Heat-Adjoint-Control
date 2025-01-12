@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from src.forward_solver import solve_forward
 
+# ----------Example for forward solver----------------------------------
 # Define parameters
 L = 1.0       # Length of the rod
 T = 0.1       # Total time
