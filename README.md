@@ -15,11 +15,15 @@ This project solves the 1D heat equation using finite difference methods and app
    ```bash
    git clone https://github.com/olia1209/1D-Heat-Adjoint-Control.git
 
-2. Install dependencies:
+2. Install the project as an editable package:
+    ```bash
+    pip install -e .
+
+3. Install dependencies:
     ```bash
     pip install -r requirements.txt
 
-3. Run the example:
+4. Run the example:
     ```bash
     python examples/example_run.py
 
