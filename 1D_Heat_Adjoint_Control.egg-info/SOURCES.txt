@@ -1,0 +1,6 @@
+README.md
+setup.py
+1D_Heat_Adjoint_Control.egg-info/PKG-INFO
+1D_Heat_Adjoint_Control.egg-info/SOURCES.txt
+1D_Heat_Adjoint_Control.egg-info/dependency_links.txt
+1D_Heat_Adjoint_Control.egg-info/top_level.txt
