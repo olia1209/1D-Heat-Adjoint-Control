@@ -75,8 +75,8 @@ Below are some example results where the **blue curve** is the *optimized temper
 1. **Linear target**  
    ![Linear target example](results/Figure_target_linear.png)
 
-2. **Decreasing temperature target**  
-   ![Decreasing target example](results/Figure_target_decreasing.png)
+2. **Parabola target**  
+   ![Parabola target example](results/Figure_target_parabola.png)
 
 3. **Sinusoidal target**  
    ![Sine wave target example](results/Figure_target_sine.png)
