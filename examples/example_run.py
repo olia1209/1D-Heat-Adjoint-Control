@@ -8,10 +8,10 @@ from src.optimize import optimize_boundary
 alpha = 0.01  # thermal diffusivity
 L = 1.0  # length of the rod in meters
 Nx = 50  # number of spatial points
-Nt = 100  # number of time steps
 T = 10.0  # total time in seconds
 dx = L / Nx
 dt = (dx**2) / (4 * alpha)  # Adjust dt based on the CFL condition
+Nt = int(T / dt)  # number of time steps
 
 
 # Initial and target temperature distributions
