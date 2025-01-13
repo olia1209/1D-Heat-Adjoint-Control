@@ -5,13 +5,14 @@ from src.optimize import optimize_boundary
 
 
 # Parameters
+alpha = 0.01  # thermal diffusivity
 L = 1.0  # length of the rod in meters
 Nx = 50  # number of spatial points
 Nt = 100  # number of time steps
 T = 10.0  # total time in seconds
 dx = L / Nx
-dt = T / Nt
-alpha = 0.01  # thermal diffusivity
+dt = (dx**2) / (4 * alpha)  # Adjust dt based on the CFL condition
+
 
 # Initial and target temperature distributions
 u0 = np.zeros(Nx)
@@ -31,5 +32,6 @@ plt.plot(np.linspace(0, L, Nx), u_sol[-1], label='Optimized Temperature')
 plt.plot(np.linspace(0, L, Nx), u_target, label='Target Temperature', linestyle='--')
 plt.xlabel('Position along the rod')
 plt.ylabel('Temperature')
+plt.title('1D heat equation boundary control optimization results')
 plt.legend()
 plt.show()
