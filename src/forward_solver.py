@@ -37,6 +37,6 @@ def solve_forward(u0, boundary_temp, alpha, dx, dt, Nx, Nt):
         
         # Boundary conditions
         u[n+1, 0] = boundary_temp(n * dt)  # Left boundary
-        u[n+1, -1] = 0  # Right boundary fixed at 0
+        u[n+1, Nx-1] = u[n+1, Nx-2]
     
     return u

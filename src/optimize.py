@@ -17,8 +17,8 @@ def compute_gradient(lambda_, dt):
     gradient = np.sum(lambda_[:, 0]) * dt
     return gradient
 
-def optimize_boundary(u0, alpha, dx, dt, Nx, Nt, L, u_target, max_iter=10, learning_rate=1e-4,
-                       boundary_min=0.0, boundary_max=200.0,penalty=0.0):
+def optimize_boundary(u0, alpha, dx, dt, Nx, Nt, u_target, max_iter=20, learning_rate=1e-4,
+                       boundary_min=0.0, boundary_max=500.0,penalty=0.0):
     # Initialize boundary control guess
     boundary_control_value = np.random.uniform(0, 100)  # Single value control at the boundary
     boundary_control = lambda t: boundary_control_value  # Convert to a callable function

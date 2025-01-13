@@ -16,10 +16,15 @@ Nt = int(T / dt)  # number of time steps
 
 # Initial and target temperature distributions
 u0 = np.zeros(Nx)
-u_target = np.linspace(0, 100, Nx)
+x = np.linspace(0, 1, Nx)
+#u_target = 80*(x - 1)**2 + 80 # Parabola
+#u_target = np.linspace(200, 80, Nx) # Linear
+u_target = 100 - 40 * np.sin(2 * np.pi * x) # Sine
+
 
 # Optimization
-optimal_boundary_temp = optimize_boundary(u0, alpha, dx, dt, Nx, Nt, L, u_target)
+optimal_boundary_temp = optimize_boundary(u0, alpha, dx, dt, Nx, Nt, u_target, max_iter=20, learning_rate=1e-4,
+                       boundary_min=0.0, boundary_max=200.0,penalty=0.0)
 
 # Solve the forward problem with optimized boundary control
 def boundary_temp(t):
