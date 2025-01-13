@@ -8,7 +8,7 @@ def solve_forward(u0, boundary_temp, alpha, dx, dt, Nx, Nt):
         u0: ndarray
             Initial temperature distribution along the x-axis.
         boundary_temp: function
-            Function for boundary control at x=0 (left boundary).
+            Function for boundary control at x=0 (left boundary). Should take time 't' as argument and return a float.
         alpha: float
             Thermal diffusivity constant.
         dx: float
