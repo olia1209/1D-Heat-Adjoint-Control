@@ -15,10 +15,11 @@ def solve_forward(u0, boundary_temp, alpha, dx, dt, Nx, Nt):
             Space step size.
         dt: float
             Time step size.
-        T: float
-            Total simulation time.
-        L: float
-            Length of the spatial domain.
+        Nx: integer
+            Number of spatial points
+        Nt: integer
+            Number of time steps
+        
     
     Returns:
         u: ndarray
